@@ -163,9 +163,9 @@ form before executing the body. In the body, the context is made
 available to other threads through a concurrency construct (such as a
 concurrent identity like an atom, ref, or agent, or a concurrent
 processing form like a future or a delay). The body terminates, and
-the first thread terminates it's processing entirely. A new thread
-calls resume on the post pause context, which resumes interceptor
-execution with the context from the paused thread. The
+the first thread terminates its processing entirely. A new thread
+calls resume on the post-pause context, which resumes interceptor
+execution with that context. The
 [sse interceptor](https://github.com/pedestal/pedestal/blob/master/service/src/io/pedestal/service/http/sse.clj),
 which creates a channel for servers to communicate with clients,
 demonstrates this pattern.
